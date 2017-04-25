@@ -21,6 +21,10 @@ public class Exercicio2HastaPremio {
         int numero;
         int contadorAciertos = 0;
         int contadorBoletos = 0;
+        int contadorBoletos3 = 0;
+        int contadorBoletos4 = 0;
+        int contadorBoletos5 = 0;
+        int contadorBoletos6 = 0;
         
         
         //Combinacion ganadora
@@ -36,7 +40,7 @@ public class Exercicio2HastaPremio {
         System.out.print("\nApuesta ganadora: "+ganadora.toString()); 
         
         //Programa de busqueda de aciertos
-        while ( contadorAciertos !=6 ){
+        while ( contadorAciertos != 6 ){
             //Reiniciamos cuantia de aciertos
             contadorAciertos = 0;
             
@@ -65,14 +69,28 @@ public class Exercicio2HastaPremio {
 
             }
             
+            if (contadorAciertos == 3) {
+                contadorBoletos3++;
+            }
             
+            if (contadorAciertos == 4) {
+                contadorBoletos4++;
+            }
+                        
+            if (contadorAciertos == 5) {
+                contadorBoletos5++;
+            }
+                        
+            if (contadorAciertos == 6) {
+                contadorBoletos6++;
+            }
             
             //Añadimos un boleto
             contadorBoletos++;
             
         }
         
-        System.out.print("\nSe ha comprobado "+contadorBoletos+" boletos.");
+        System.out.print("\nSe ha comprobado "+contadorBoletos+" boletos.\nHan salido "+contadorBoletos3+" de 3 aciertos.\nHan salido "+contadorBoletos4+" de 4 aciertos.\nHan salido "+contadorBoletos5+" de 5 aciertos.\nHan salido "+contadorBoletos6+" de 6 aciertos.");
 
     }
 
