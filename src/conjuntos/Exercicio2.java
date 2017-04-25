@@ -26,8 +26,6 @@ public class Exercicio2 {
         int numeroApuestas;
         TreeSet <Integer> numeros = new TreeSet <> ();
         
-        int[] ganadora = new int[6];
-        
         System.out.print("\n¿Cuantas apuestas quieres realizar? ");
         numeroApuestas = leer.nextInt();
         int[][] apuestas = new int [numeroApuestas][6];
@@ -46,13 +44,12 @@ public class Exercicio2 {
         
         //Apuesta ganadora
         numeros.clear();
-        for ( int contador = 0; contador < ganadora.length; contador++ ) {
+        for ( int contador = 0; contador < 6; contador++ ) {
             numero = aleatorio.nextInt(49) + 1;
             while ( numeros.contains(numero) ){
                 numero = aleatorio.nextInt(49) + 1;
             }
             numeros.add(numero);
-            ganadora[contador] = numero;
         }
         
 
