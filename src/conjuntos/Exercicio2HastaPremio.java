@@ -17,7 +17,7 @@ public class Exercicio2HastaPremio {
         TreeSet <Integer> ganadora = new TreeSet <> ();
         ArrayList <TreeSet> numerosBoletos = new ArrayList <> ();
         TreeSet <Integer> boletos;
-        Object[] boleto = new Object[6];
+        Integer[] boleto = new Integer[6];
         Scanner leer = new Scanner(System.in);
         int numero;
         int contadorAciertos = 0;
@@ -56,9 +56,9 @@ public class Exercicio2HastaPremio {
             System.out.print("\nEl boleto número "+(contadorBoletos + 1)+": "+numerosBoletos.get(contadorBoletos).toString()+"\nCoinciden los números: ");
             
             //Buscamos numero que coincidan en la apuesta ganadora
-            boleto = numerosBoletos.get(contadorBoletos).toArray();
+            boleto = (Integer[]) numerosBoletos.get(contadorBoletos).toArray();
             for ( int contador = 0; contador < boleto.length; contador++ ) {
-                numero = (Integer) boleto[contador];
+                numero = boleto[contador];
                 if ( ganadora.contains(numero)) {
                     System.out.print(numero+" ");
                     contadorAciertos++;
