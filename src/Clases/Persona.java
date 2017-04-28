@@ -14,7 +14,7 @@ public class Persona implements Comparable<Persona> {
     private String dni;
     private String apellido;
     
-    public Persona (String nombre, int edad){}
+    public Persona (){}
     
     public Persona (String nombre, int telefono, String dni, String apellido) {
         this.nombre = nombre;
@@ -37,6 +37,15 @@ public class Persona implements Comparable<Persona> {
     
     public void setTelefono (int telefono) {
         this.telefono = telefono;
+    }
+    
+    public boolean compararDni (String dni) {
+        if (this.dni.equalsIgnoreCase(dni)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
     
     public String getDni () {
@@ -68,10 +77,10 @@ public class Persona implements Comparable<Persona> {
     public int compareTo(Persona compara) {
         
         if ( this.soloNumeroDNI() < compara.soloNumeroDNI() ) {
-            return 1;
+            return -1;
         }
         else if ( this.soloNumeroDNI() > compara.soloNumeroDNI()){
-            return -1;
+            return 1;
         }
         else {
             return 0;
