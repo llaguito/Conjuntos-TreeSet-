@@ -65,7 +65,7 @@ public class Persona implements Comparable<Persona> {
     }
     
     public int soloNumeroDNI () {
-        return Integer.parseInt(this.dni.substring(0, 7));
+        return Integer.parseInt(this.dni.substring(0, 8));
     }
     
     public String letraDNI (){
