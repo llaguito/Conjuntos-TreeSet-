@@ -14,12 +14,10 @@ public class ProgramaClasePersona {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         TreeSet <Persona> muchas = new TreeSet <> ();
-        Persona yo = new Persona("Santiago", 354490458, "44487709M", "Losada");
-        Persona alexis = new Persona("Alexis", 789456123, "44444488L",  "Sierra");
-        Persona boris = new Persona("Boris", 456789123, "78945612A", "Álvarez");
-        muchas.add(yo);
-        muchas.add(alexis);
-        muchas.add(boris);
+
+        muchas.add(new Persona("Santiago", 354490458, "44487709M", "Losada"));
+        muchas.add(new Persona("Alexis", 789456123, "44444488L",  "Sierra"));
+        muchas.add(new Persona("Boris", 456789123, "78945612A", "Álvarez"));
         
         ArrayList <String> menu = new ArrayList <> ();
         menu.add("1 - Altas");
